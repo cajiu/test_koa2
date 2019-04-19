@@ -14,7 +14,8 @@ const schema = new Schema({
     deleted: { type: Boolean, default: false },
     last_login_time: { type: Date },
     last_login_ip: { type: String, default: ''}, //
-    salt:{type: String,default: ''}
+    salt:{type: String,default: ''},
+    team_id:{type:ObjectId,ref:'team'}
 });
 
 module.exports = mongoose.model('user', schema);

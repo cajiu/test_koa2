@@ -13,7 +13,9 @@ const fs = require('fs');
 const Cors = require('./config/cors.config');
 // const mongodbConfig = require('./config/mongodb.config');
 // mongoose.connect(mongodbConfig.uri, mongodbConfig.option);
-mongoose.connect('mongodb://localhost:27017/test')
+mongoose.connect('mongodb://localhost:27017/test',{ useNewUrlParser: true })
+
+
 const routes = fs.readdirSync('./routes').filter(item => /\.js$/.test(item)).map(item => require(`./routes/${item}`));
 
 // error handler
@@ -31,6 +33,7 @@ app.use(views(__dirname + '/views', {
   extension: 'pug'
 }))
 
+app.keys = ['ajiu123']
 app.use(cors({
   credentials: true,
   origin: (ctx) => {
@@ -70,6 +73,8 @@ app.use(async (ctx, next)  => {
         error:true
       };
       return ctx.status = 401
+    }else{
+      await next()
     }
   }else {
     await next()
@@ -80,6 +85,8 @@ app.use(async (ctx, next)  => {
 routes.forEach(item => {
   app.use(item.routes(), item.allowedMethods())
 });
+
+
 // error-handling
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
