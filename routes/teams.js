@@ -145,13 +145,13 @@ router.post('/applyAddTeam',async (ctx,next) => {
             }
         }else{
             const team = await Team.find({_id:body.teamId})
-
+            console.log(team)
             if(team.length>0){
                 await  Message.create({
                     type:3,
                     msg:`${ctx.session.user.nickname}申请加入${team[0].team_name}团队`,
                     fromUser: ctx.session.user._id,
-                    toUser: team.team_admin
+                    toUser: team[0].team_admin
                 })
                 ctx.body = {
                     msg : '已发送申请'
