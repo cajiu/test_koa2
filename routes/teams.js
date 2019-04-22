@@ -1,6 +1,7 @@
 const router = require('koa-router')()
 const Team = require('../models/team.mongo')
 const User = require('../models/user.mongo')
+const Message = require('../models/message.mongo')
 const crypto = require('crypto')
 
 router.prefix('/teams')
@@ -14,7 +15,9 @@ router.post('/creatTeam',async (ctx, next) => {
                 msg: '用户id错误'
             }
         }else{
-            const hasTeam = await User.find({user_id:ctx.session.user._id,team_id:{"$exists":true}})
+            const hasTeam = await User.find({_id:ctx.session.user._id,team_id:{"$exists":true}})
+            console.log("user",hasTeam)
+
             const nameExists = await Team.find({team_name:body.teamName})
             if(hasTeam.length>0){
                 ctx.body = {
@@ -126,6 +129,41 @@ router.delete('/deleteOne',async (ctx,next) => {
 
 router.post('/applyAddTeam',async (ctx,next) => {
     try {
+        const body = ctx.request.body
+        if(!body.teamId){
+            ctx.body = {
+                error : true,
+                msg : '参数错误'
+            }
+        }
+        const hasTeam = await User.find({_id:ctx.session.user._id,team_id:{"$exists":true}})
+        if(hasTeam.length>0){
+            console.log("hasTeam",hasTeam.length)
+            ctx.body = {
+                error : true,
+                msg : '已有团队'
+            }
+        }else{
+            const team = await Team.find({_id:body.teamId})
+
+            if(team.length>0){
+                await  Message.create({
+                    type:3,
+                    msg:`${ctx.session.user.nickname}申请加入${team[0].team_name}团队`,
+                    fromUser: ctx.session.user._id,
+                    toUser: team.team_admin
+                })
+                ctx.body = {
+                    msg : '已发送申请'
+                }
+            }else{
+                ctx.body = {
+                    error : true,
+                    msg : '团队不存在'
+                }
+            }
+        }
+
 
     }catch (e) {
         console.log(e)
