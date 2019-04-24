@@ -1,5 +1,7 @@
 const router = require('koa-router')()
 const User = require('../models/user.mongo')
+const Team = require('../models/team.mongo')
+
 const crypto = require('crypto')
 
 router.prefix('/users')
@@ -36,20 +38,27 @@ router.post('/loginin',async  (ctx, next) => {
   const body = ctx.request.body
   try {
     const user = await User.findOne({ phone: body.phone, deleted: false })
-    console.log(user,111)
     if (user) {
       const pwd_salt = `${body.pwd}${user.salt}`;
       const md5 = crypto.createHash('md5');
       md5.update(pwd_salt);
       const pwd_result = md5.digest('hex');
       if (pwd_result === user.pwd) {
+
+        let isAdmin = false
+        const team = await Team.findOne({_id:user.team_id,team_admin:user._id})
+        if(team&&team._id){
+          isAdmin = true
+        }
         ctx.session.user = {
           _id: user._id,
           nickname: user.nickname,
           rights: user.rights,
           phone: user.phone,
           avatar: user.avatar,
+          isAdmin
         };
+        await User.updateOne({_id: user._id}, {$set: { last_login_time: new Date(), last_login_ip: ctx.ip }});
         ctx.body = {
           user: {
             _id: user._id,
@@ -57,21 +66,19 @@ router.post('/loginin',async  (ctx, next) => {
             phone: user.phone,
             avatar: user.avatar,
             rights: user.rights,
+            isAdmin
           },
         };
-        await User.updateOne({_id: user._id}, {$set: { last_login_time: new Date(), last_login_ip: ctx.ip }});
       } else {
         ctx.body = {
           error: true,
           msg: '密码错误',
-          errorCode: 20071,
         };
       }
     } else {
       ctx.body = {
         error: true,
         msg: '用户不存在',
-        errorCode: 20072,
       };
     }
   } catch (e) {
@@ -80,7 +87,6 @@ router.post('/loginin',async  (ctx, next) => {
       error: true,
       errorLog: e,
       msg: '登录出错',
-      errorCode: 20070,
     };
   }
 })
@@ -137,7 +143,6 @@ router.post('/signup', async (ctx, next) => {
       }
       ctx.body = {
         msg: '注册成功',
-        errorCode: 0,
         user: {
           users: await User.find({ phone: user.phone, deleted: false }, { nickname: true, avatar: true, rights: true, phone: true })
         }
@@ -158,28 +163,22 @@ router.get('/list',async (ctx, next) => {
     const query = ctx.request.query;
     const current = query.currentPage ? Number(query.currentPage) : 1;
     const pageSize = Number(query.pageSize) || 10;
-    const condition = {deleted: false}
-    if (query.search && query.search.nickname && query.search.nickname.trim()) {
-      query.search.nickname = query.search.nickname.trim()
-      const nickname = { $regex: query.search.nickname, $options: "i" };
+    const condition = {}
+    if (query.search && query.search && query.search.trim()) {
+      query.search = query.search.trim()
+      const nickname = { $regex: query.search, $options: "i" };
+      const phone = { $regex: query.search, $options: "i" };
       condition.nickname = nickname
+      condition.phone = phone
     }
-    if (query.search && query.search.phone && query.search.phone.trim()) {
-      query.search.phone = query.search.phone.trim()
-      condition.phone = query.search.phone
-    }
-
-    const list = await User.find(condition)
+    const s = query.search ? {deleted: false, $or:[{nickname:condition.nickname},{phone:condition.phone}]}:{deleted: false}
+    const list = await User.find(s)
         .populate({
           path:'team_id',
           select: 'team_name'
         })
-        .populate({
-          path:'team_admin',
-          select: 'team_name'
-        })
         .skip(pageSize*(current -1)).limit(pageSize)
-    const total = await User.countDocuments(condition)
+    const total = await User.countDocuments(s)
     ctx.body = {
       list,
       pagination: {
@@ -192,7 +191,6 @@ router.get('/list',async (ctx, next) => {
     ctx.body = {
       error: true,
       errorLog: e,
-      errorCode: 50001,
       msg: '获取出错',
     };
   }
