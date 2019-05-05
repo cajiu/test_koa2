@@ -233,16 +233,16 @@ router.put('/updateInfo',async (ctx, next) => {
   }
 })
 
-//用户删除
+//用户注销
 router.delete('/deleteUser',async (ctx, next) => {
   try {
     const body = ctx.request.body
-    const item = await User.find({_id:body.user_id,deleted: false})
+    const item = await User.find({_id:ctx.session.user._id,deleted: false})
     if(item.length>0){
       console.log(item)
-      await User.updateOne({_id:body.user_id},{$set:{deleted: true}})
+      await User.updateOne({_id:ctx.session.user._id},{$set:{deleted: true}})
       ctx.body = {
-        msg:"删除成功"
+        msg:"注销成功"
       }
     }else{
       ctx.body = {

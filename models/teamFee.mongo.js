@@ -12,4 +12,4 @@ const schema = new Schema({
     type: { type: Number, default: 1 },//1.增加 2.减少
 });
 
-module.exports = mongoose.model('team', schema);
+module.exports = mongoose.model('teamFee', schema);
