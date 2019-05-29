@@ -29,7 +29,7 @@ router.get('/list', async (ctx, next) => {
     }
 })
 
-router.post('/applyRes', async (ctx, next) => {
+router.post('/applyRes', async (ctx, next) => {//管理员同意拒接
     try {//1同意，2拒绝
         const body = ctx.request.body
         const message =  await Message.find({_id:body.messageId})
@@ -50,13 +50,18 @@ router.post('/applyRes', async (ctx, next) => {
                 }
         }else {
             if (body.respond === '1'){
-                const fUser = await User.find({_id:message[0].fromUser,team_id:{"$exists":true}})
-                if(fUser.length>0){
+                const hasTeam = await User.find({_id:message[0].fromUser,team_id:{"$exists":true}})
+                const tnull = hasTeam.find(it=>{
+                    if(it.team_id){
+                        return it
+                    }
+                })
+                if(tnull&&tnull._id){
                     await Message.updateOne({ _id:body.messageId },{ $set:{ type:4 } })
                     ctx.body = {
                         msg:'对方已加入其他团队'
                     }
-                }else {
+                } else {
                     await User.updateOne({ _id:message[0].fromUser,deleted: false },{ $set:{team_id:team._id}})
                     await Message.create({
                         type:1,
@@ -82,8 +87,60 @@ router.post('/applyRes', async (ctx, next) => {
                 }
             }
         }
-
-
+    }catch (e) {
+        console.log(e)
+        ctx.body = {
+            error:true,
+            msg:e
+        }
+    }
+})
+router.post('/userApplyRes', async (ctx, next) => {//用户同意拒接
+    try {//1同意，2拒绝
+        const body = ctx.request.body
+        const message =  await Message.find({_id:body.messageId})
+            .populate({
+                path:'fromUser',
+                select:"team_id"
+            })
+        if (body.respond === '1'){
+            const hasTeam = await User.find({_id:ctx.session.user._id,team_id:{"$exists":true}})
+            const tnull = hasTeam.find(it=>{
+                if(it.team_id){
+                    return it
+                }
+            })
+            if(tnull&&tnull._id){
+                await Message.updateOne({ _id:body.messageId },{ $set:{ type:4 } })
+                ctx.body = {
+                    msg:'已有团队',
+                    hasTeam
+                }
+            }else {
+                await User.updateOne({ _id:ctx.session.user._id,deleted: false },{ $set:{team_id:hasTeam.team_id}})
+                await Message.create({
+                    type:1,
+                    msg:`${hasTeam.username}已成功加入团队`,
+                    // fromUser: team.team_admin,
+                    toUser: message[0].fromUser
+                })
+                await Message.updateOne({ _id:body.messageId },{ $set:{ type:4 } })
+                ctx.body = {
+                    msg:'已同意'
+                }
+            }
+        }else if (body.respond === '2'){
+            await Message.create({
+                type:1,
+                msg:`${hasTeam.username}拒接加入团队`,
+                // fromUser: team[0].team_admin,
+                toUser: message[0].fromUser
+            })
+            await Message.updateOne({ _id:body.messageId },{ $set:{ type:4 } })
+            ctx.body = {
+                msg:"已拒绝"
+            }
+        }
 
     }catch (e) {
         console.log(e)
