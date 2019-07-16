@@ -1,0 +1,450 @@
+[
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate1",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 1,
+    "sentiment": 123
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 1,
+    "sentiment": 102
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 1,
+    "sentiment": 987
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 1,
+    "sentiment": 99
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 1,
+    "sentiment": 10
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 1,
+    "sentiment": 103
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 1,
+    "sentiment": 131
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate2",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 2,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 2,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 2,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 2,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 2,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 2,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 2,
+    "sentiment": 986
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate3",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 3,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 3,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 3,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 3,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 3,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 3,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 3,
+    "sentiment": 986
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate4",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 4,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 4,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 4,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 4,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 4,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 4,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 4,
+    "sentiment": 986
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate5",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 5,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 5,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 5,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 5,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 5,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 5,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 5,
+    "sentiment": 986
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate6",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 6,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 6,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 6,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 6,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 6,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 6,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 6,
+    "sentiment": 986
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate7",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 7,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 7,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 7,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 7,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 7,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 7,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 7,
+    "sentiment": 986
+  },
+  {
+    "productId": 11,
+    "name": "荣耀10青春版#cate8",
+    "img": "https://m.360buyimg.com/babel/jfs/t30184/230/476184793/260944/53cc2bbc/5bf4b25dN3b673c83.jpg!q70.jpg",
+    "price": 1399,
+    "type": 8,
+    "sentiment": 121
+  },
+  {
+    "productId": 12,
+    "name": "一加手机 6T",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/6425/40/3887/217009/5bd716e9E4886d5d8/b3da975f4047ded3.jpg!q70.jpg",
+    "price": 2999,
+    "type": 8,
+    "sentiment": 1032
+  },
+  {
+    "productId": 13,
+    "name": "小米 6X",
+    "img": "https://img10.360buyimg.com/n7/jfs/t19690/263/1947634738/190301/ad172397/5adfe5eaN42591f8c.jpg",
+    "price": 59.99,
+    "type": 8,
+    "sentiment": 105
+  },
+  {
+    "productId": 14,
+    "name": "荣耀 8X",
+    "img": "https://img12.360buyimg.com/n7/jfs/t1/32571/35/346/180334/5c3ad991Ea4727e0a/de37c13f67b584cc.jpg",
+    "price": 3488,
+    "type": 8,
+    "sentiment": 122
+  },
+  {
+    "productId": 15,
+    "name": "荣耀 m2",
+    "img": "https://img14.360buyimg.com/n7/jfs/t1/1156/8/14017/123589/5bd9a4e8E7dbd4a15/70fbbccdf8811111.jpg",
+    "price": 2988,
+    "type": 8,
+    "sentiment": 156
+  },
+  {
+    "productId": 16,
+    "name": "OOPL K1",
+    "img": "https://img13.360buyimg.com/n7/jfs/t1/9723/3/3933/247634/5bd97d98Ecce0ffc6/b6907abf75afe34d.jpg",
+    "price": 1799,
+    "type": 8,
+    "sentiment": 109
+  },
+  {
+    "productId": 17,
+    "name": "iphone Xs 128G",
+    "img": "https://m.360buyimg.com/babel/jfs/t1/3730/7/3438/394579/5b996f2eE1727c59e/373cf10d42a53b72.jpg",
+    "price": 9888,
+    "type": 8,
+    "sentiment": 986
+  }
+]

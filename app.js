@@ -65,7 +65,7 @@ app.use(session(CONFIG, app));
 
 app.use(async (ctx, next)  => {
   // ignore
-  if (ctx.path !== '/users/loginin' && ctx.path !== '/users/signup' ) {
+  if (ctx.path !== '/users/loginin' && ctx.path !== '/users/signup' && ctx.path !== "/shop/type" && ctx.path !== "/shop/list") {
     let user = ctx.session.user;
     if(!user){
       ctx.body = {
