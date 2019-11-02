@@ -24,7 +24,7 @@
     "koa-views": "^5.2.1",
     "m3u8": "0.0.8",
     "mongodb": "^3.2.3",
-    "mongoose": "^5.5.0",
+    "mongoose": "^5.7.5",
     "pug": "^2.0.0-rc.1"
   },
   "devDependencies": {
