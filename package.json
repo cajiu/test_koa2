@@ -25,7 +25,7 @@
     "m3u8": "0.0.8",
     "mongodb": "^3.2.3",
     "mongoose": "^5.5.0",
-    "pug": "^2.0.0-rc.1"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^1.8.1"
